@@ -6,13 +6,14 @@ package main;
  * */
 public class Customer {
 	String name;
+	protected Double discount = 0.0;
 
 	public Customer(String name) {
 		this.name = name;
 	}
 
 	public Double getDiscount() {
-		return 0.0;
+		return discount;
 	}
 
 	public String getName() {

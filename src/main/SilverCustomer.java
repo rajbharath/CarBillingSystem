@@ -7,11 +7,8 @@ public class SilverCustomer extends Customer {
 
 	public SilverCustomer(String name) {
 		super(name);
+		discount = 9.0;
 	}
 
-	@Override
-	public Double getDiscount() {
-		return 20.0;
-	}
 
 }
