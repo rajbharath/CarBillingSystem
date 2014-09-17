@@ -19,40 +19,39 @@ public class Service {
 		this.car = car;
 	}
 
-	public double getCharge() {
+	private double getCharge() {
 		return car.getServiceCharge();
 	}
 
-	public double getDiscountedCharge() {
+	private double getDiscountedCharge() {
 		return getCharge() - getCharge() * (getDiscount() / 100);
 	}
 
-	public double getDiscount() {
+	private double getDiscount() {
 		return customer.getDiscount();
 	}
 
-	public String getServicedCar() {
+	private String getServicedCar() {
 		return car.toString();
 	}
 
-	public String getServiceCustomerName() {
+	private String getServiceCustomerName() {
 		return customer.getName();
 	}
 
-	public String getServicedCarNumber() {
+	private String getServicedCarNumber() {
 		return car.getNumber();
 	}
 
-	@Override
-	public String toString() {
+	public String getInfo() {
 		String service = "";
-		service += "CAR SERVICE CENTER" + "\n";
+		
 		service += "Customer name :" + customer.getName() + "\n";
-		service += "Car Number : " + car.getNumber()+ "\n";
-		service += "Car Specifications : " + car+ "\n";
-		service += "Charge :" + getCharge()+ "\n";
-		service += "Discount Percentage :" + getDiscount()+ "\n";
-		service += "Discounted Charge :" + getDiscountedCharge()+ "\n";
+		service += "Car Number : " + car.getNumber() + "\n";
+		service += "Car Specifications : " + car + "\n";
+		service += "Charge :" + getCharge() + "\n";
+		service += "Discount Percentage :" + getDiscount() + "\n";
+		service += "Discounted Charge :" + getDiscountedCharge() + "\n";
 		return service;
 	}
 

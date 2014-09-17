@@ -1,11 +1,15 @@
 package main;
 
-public enum FuelType implements SpecificationValue{
-	DIESEL(30,"Diesel"), PETROL(40,"Petrol");
+/*
+ * responsibilities
+ * - holds servicecharge details for each fuel type 
+ * */
+public enum FuelType implements SpecificationValue {
+	DIESEL(30, "Diesel"), PETROL(40, "Petrol");
 	double value;
 	private String name;
 
-	private FuelType(double value,String name) {
+	private FuelType(double value, String name) {
 		this.value = value;
 		this.name = name;
 	}
@@ -18,5 +22,5 @@ public enum FuelType implements SpecificationValue{
 	public String toString() {
 		return name;
 	}
-	
+
 }

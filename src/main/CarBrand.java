@@ -1,5 +1,9 @@
 package main;
 
+/*
+ * responsibilities
+ * - holds servicecharge details for each car brand 
+ * */
 public enum CarBrand implements SpecificationValue {
 	BMW(40.0), AUDI(30.0);
 	private Double value;

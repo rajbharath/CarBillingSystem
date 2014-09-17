@@ -2,7 +2,8 @@ package main;
 
 /*
  * responsibilities
- * - maintains the contract for a Car
+ * - serviceCharge of a car
+ * - number of a car
  * */
 public class Car {
 
