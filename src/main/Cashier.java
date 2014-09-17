@@ -5,15 +5,27 @@ package main;
  * */
 public class Cashier {
 	static String name = "Murugan";
+	private BillingSystem billingSystem;
+
+	public Cashier() {
+		billingSystem = new BillingSystem("Number One Car Service Center",
+				"Murugan");
+	}
+
+	public void generateBill(Car car, Customer customer) {
+		billingSystem.generateBill(car, customer);
+	}
 
 	public static void main(String[] args) {
-		BillingSystem billingSystem = new BillingSystem();
+		Cashier cashier = new Cashier();
+
 		Specifications specifications = new Specifications();
 		specifications.put(SpecificationName.CARBRAND, CarBrand.AUDI);
 		specifications.put(SpecificationName.FUELTYPE, FuelType.DIESEL);
 		Car car = new Car("TN57 AA 9544", specifications);
+
 		Customer customer = new Customer("bharath", Badge.GOLD);
-		Service service = new Service(car, customer);
-		billingSystem.generateBill(service, name);
+
+		cashier.generateBill(car, customer);
 	}
 }
