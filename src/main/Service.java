@@ -39,4 +39,21 @@ public class Service {
 		return customer.getName();
 	}
 
+	public String getServicedCarNumber() {
+		return car.getNumber();
+	}
+
+	@Override
+	public String toString() {
+		String service = "";
+		service += "CAR SERVICE CENTER" + "\n";
+		service += "Customer name :" + customer.getName() + "\n";
+		service += "Car Number : " + car.getNumber()+ "\n";
+		service += "Car Specifications : " + car+ "\n";
+		service += "Charge :" + getCharge()+ "\n";
+		service += "Discount Percentage :" + getDiscount()+ "\n";
+		service += "Discounted Charge :" + getDiscountedCharge()+ "\n";
+		return service;
+	}
+
 }

@@ -4,10 +4,26 @@ package main;
  * responsibilities
  * - maintains the contract for a Car
  * */
-public interface Car {
+public class Car {
 
-	public double getServiceCharge();
+	Specifications specifications;
+	String number;
 
-	@Override
-	public String toString();
+	public Car(String number, Specifications specifications) {
+		this.specifications = specifications;
+		this.number = number;
+	}
+
+	public double getServiceCharge() {
+		return specifications.getTotalServiceCharge();
+	}
+
+	public String toString() {
+		return specifications.getFullSpecificationsName();
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
 }
