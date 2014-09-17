@@ -1,0 +1,11 @@
+Problem Statement:
+We will take a Car Service Center Billing System
+A standard rate for Petrol Car / Diesel Car
+Exceptions based on brands of Car / with specific engine config
+Also billing has a special advantage to loyal customers 
+Loyal Customers:
+  Customers with "gold" badge get 15% off
+  Customers with "silver" badge get 9% off
+Normal Customers:
+  Normal billing except for discounts.
+  
