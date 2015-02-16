@@ -1,4 +1,4 @@
-package main;
+package main.system;
 
 public interface SpecificationValue {
 	public double getServiceCharge();
